@@ -1,0 +1,5 @@
+username:dbadmin
+password:Q#604664456957uf
+connectionmethod:tcp
+port:3306
+databaseName:reservations

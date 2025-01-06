@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="<%= locale %>">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holidayparks - Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 700px;
+        }
+
+        h1 {
+            color: #2c6e49;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #5a5a5a;
+            margin-bottom: 20px;
+        }
+
+        a button {
+            background-color: #2c6e49;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        a button:hover {
+            background-color: #1e4a31;
+        }
+
+        .logo-container {
+            width: 100px;
+            /* Of de breedte die je wilt voor het logo */
+            height: 78px;
+            /* Of de hoogte die je wilt voor het logo */
+            overflow: hidden;
+            /* Knip overtollige af, indien nodig */
+            margin: 0 auto;
+            /* Centreert de logo-container */
+            margin-bottom: 5px;
+            /* Ruimte onder de logo-container */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 100%;
+            /* Maakt de logo breedte gelijk aan de container */
+            height: auto;
+            /* Behoudt de verhouding */
+        }
+
+        .header {
+            position: fixed;
+            top: 50px;
+        }
+
+        .language-selector {
+            display: flex;
+            /* Zorgt voor een flexibele lay-out van de knoppen */
+            justify-content: center;
+            /* Centreert de knoppen horizontaal */
+            gap: 5px;
+            /* Voegt ruimte tussen de knoppen toe */
+        }
+
+        .language-selector button {
+            background-color: #f0f8f5;
+            color: #2c6e49;
+            border: 1px solid #2c6e49;
+            padding: auto;
+            font-size: 7px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .language-selector button:hover {
+            background-color: #2c6e49;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <script src="/scripts/language.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            applyLanguageChoice();
+        });
+    </script>
+    <div class="header">
+        <div class="logo-container">
+            <img src="../image/logo.jpg" alt="Holidayparks Logo" class="logo">
+        </div>
+        <div class="language-selector">
+            <button>EN</button>
+            <button>NL</button>
+            <button>DE</button>
+        </div>
+    </div>
+    <div class="container">
+        <h1 id="welcome-text" data-key="welcome">Welcome to our reservation page</h1>
+        <p id="description-text" data-key="description">On our reservation page, you can make your booking.</p>
+        <a href="/reservation"><button id="reservation-button" data-key="button">Make a reservation</button></a>
+    </div>
+</body>
+</html>
