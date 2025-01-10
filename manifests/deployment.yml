@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jimmynfontyswebsite 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jimmynfontyswebsite
+  template:
+    metadata:
+      labels:
+        app: jimmynfontyswebsite 
+    spec:
+      containers:
+        - name: jimmynfontyswebsite 
+          image: fonteynvakantieparken.azurecr.io/jimmynfontyswebsite
+          ports:
+          - containerPort: 8080
