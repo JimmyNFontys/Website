@@ -14,9 +14,6 @@ Add Activities.
 Select Dates: Choose the desired stay dates and activity dates.
 Confirm Booking: Receive a confirmation email.
 
-Enjoy planning your vacation!
-For support, contact us at holiday_parks@hotmail.com.
-
 #Configuration REST API for HolidayParks
 
 The database connection is managed through the configuration file ('config.txt').
