@@ -16,13 +16,4 @@ Confirm Booking: Receive a confirmation email.
 
 #Configuration REST API for HolidayParks
 
-The database connection is managed through the configuration file ('config.txt').
-Change the following details to modify database information and passwords:
-
--'username'
--'password'
--'connectionmethod'
--'ip'
--'port'
--'databaseName'
 
